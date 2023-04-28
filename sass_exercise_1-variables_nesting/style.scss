@@ -1,0 +1,35 @@
+$red-color:red;
+$blue-color:blue;
+$green-color:green;
+
+body {
+    border: 1px solid $red-color;
+}
+
+div {
+    h1 {
+        color:$green-color;
+        text-decoration: 2px underline $blue-color;
+        text-align: center;
+        text-underline-offset: 8px;
+    }
+    section {
+        display: flex;
+        padding: 0 20px;
+        article {
+            border: 1px solid $green-color;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 20px 16px;
+            &:nth-child(even) p {
+                color: $red-color;
+            }
+            &:nth-child(odd) p {
+                color: $blue-color;
+            }
+            p {
+                font-size: 24px;
+            }
+        }
+    }
+}
