@@ -1,3 +1,7 @@
+body {
+  margin: 0.5rem;
+}
+
 div {
   border: 0.0625rem solid red;
   width: 68%;
@@ -11,29 +15,29 @@ div h1 {
   text-decoration-thickness: 0.125rem;
 }
 div section {
-  margin: 10px 10px;
+  margin: 0.625rem;
 }
 div section:nth-child(2) {
   display: flex;
 }
 div section:nth-child(2) article:nth-child(odd) {
   color: blue;
-  border: 1px solid green;
+  border: 0.0625rem solid green;
   font-size: 1rem;
-  padding: 20px 15px;
+  padding: 1.25rem 0.9375rem;
   text-align: center;
 }
 div section:nth-child(2) article:nth-child(even) {
   color: red;
-  border: 1px solid green;
+  border: 0.0625rem solid green;
   font-size: 1rem;
-  padding: 20px 15px;
+  padding: 1.25rem 0.9375rem;
   text-align: center;
 }
 div section:last-child article {
   text-align: center;
   color: green;
-  border: 1px solid blue;
+  border: 0.0625rem solid blue;
   font-size: 1.5rem;
 }
 

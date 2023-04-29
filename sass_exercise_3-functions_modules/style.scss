@@ -1,6 +1,16 @@
 @use "./variable-module.scss" as v;
 @use "./function-module.scss" as f;
 
+@mixin article-card($color, $border-color, $font-size) {
+    color: $color;
+    border: f.rem(1) + rem solid $border-color;
+    font-size: $font-size;
+}
+
+body {
+    margin: f.rem(8) + rem;
+}
+
 div {
     border: f.rem(1) + rem solid red;
     width: 68%;
@@ -15,20 +25,20 @@ div {
     }
 
     section {
-        margin: v.$section-margin;
+        margin: f.rem(v.$section-margin) + rem;
 
         &:nth-child(2) {
             display: flex;
 
             article:nth-child(odd) {
-                @include v.article-card(blue, green, f.rem(16) + rem);
-                padding: v.$article-padding;
+                @include article-card(blue, green, f.rem(16) + rem);
+                padding: f.rem(v.$article-padding-top-bottom) + rem f.rem(v.$article-padding-left-right) + rem;
                 text-align: center;
             }
 
             article:nth-child(even) {
-                @include v.article-card(red, green, f.rem(16) + rem);
-                padding: v.$article-padding;
+                @include article-card(red, green, f.rem(16) + rem);
+                padding: f.rem(v.$article-padding-top-bottom) + rem f.rem(v.$article-padding-left-right) + rem;
                 text-align: center;
             }
         }
@@ -36,7 +46,7 @@ div {
         &:last-child {
             article {
                 text-align: center;
-                @include v.article-card(green, blue, f.rem(24) + rem);
+                @include article-card(green, blue, f.rem(24) + rem);
             }
         }
     }
