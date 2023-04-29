@@ -25,17 +25,13 @@ div {
 
         &:nth-child(2) {
             display: flex;
-        }
 
-        &:nth-child(2) {
             article:nth-child(odd) {
                 @include article-card(blue, green, 1rem);
                 padding: $article-padding;
                 text-align: center;
             }
-        }
 
-        &:nth-child(2) {
             article:nth-child(even) {
                 @include article-card(red, green, 1rem);
                 padding: $article-padding;
