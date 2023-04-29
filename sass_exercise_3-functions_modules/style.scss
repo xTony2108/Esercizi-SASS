@@ -1,0 +1,43 @@
+@use "./variable-module.scss" as v;
+@use "./function-module.scss" as f;
+
+div {
+    border: f.rem(1) + rem solid red;
+    width: 68%;
+
+    h1 {
+        color: green;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: blue;
+        text-underline-offset: f.rem(8) + rem;
+        text-decoration-thickness: f.rem(2) + rem;
+    }
+
+    section {
+        margin: v.$section-margin;
+
+        &:nth-child(2) {
+            display: flex;
+
+            article:nth-child(odd) {
+                @include v.article-card(blue, green, f.rem(16) + rem);
+                padding: v.$article-padding;
+                text-align: center;
+            }
+
+            article:nth-child(even) {
+                @include v.article-card(red, green, f.rem(16) + rem);
+                padding: v.$article-padding;
+                text-align: center;
+            }
+        }
+
+        &:last-child {
+            article {
+                text-align: center;
+                @include v.article-card(green, blue, f.rem(24) + rem);
+            }
+        }
+    }
+}
