@@ -10,6 +10,7 @@ $section-margin: 10px 10px;
 div {
     border: 1px solid red;
     width: 68%;
+
     h1 {
         color: green;
         text-align: center;
@@ -18,32 +19,35 @@ div {
         text-underline-offset: 8px;
         text-decoration-thickness: 2px;
     }
+
     section {
         margin: $section-margin;
-    }
-    section:nth-child(2) {
-        display: flex;
-    }
-    section:nth-child(2) {
-        article:nth-child(odd) {
-            @include article-card(blue, green, 1rem);
-            padding: $article-padding;
-            text-align: center;
+
+        &:nth-child(2) {
+            display: flex;
         }
-    }
-    section:nth-child(2) {
-        article:nth-child(even) {
-            @include article-card(red, green, 1rem);
-            padding: $article-padding;
-            text-align: center;
+
+        &:nth-child(2) {
+            article:nth-child(odd) {
+                @include article-card(blue, green, 1rem);
+                padding: $article-padding;
+                text-align: center;
+            }
         }
-    }
-    section:last-child {
-        article {
-            text-align: center;
-            @include article-card(green, blue, 24px);
+
+        &:nth-child(2) {
+            article:nth-child(even) {
+                @include article-card(red, green, 1rem);
+                padding: $article-padding;
+                text-align: center;
+            }
+        }
+
+        &:last-child {
+            article {
+                text-align: center;
+                @include article-card(green, blue, 24px);
+            }
         }
     }
 }
-
-
