@@ -3,16 +3,16 @@
 
 @mixin article-card($color, $border-color, $font-size) {
     color: $color;
-    border: f.rem(1) + rem solid $border-color;
+    border: f.rem(1) solid $border-color;
     font-size: $font-size;
 }
 
 body {
-    margin: f.rem(8) + rem;
+    margin: f.rem(8);
 }
 
 div {
-    border: f.rem(1) + rem solid red;
+    border: f.rem(1) solid red;
     width: 68%;
 
     h1 {
@@ -20,25 +20,25 @@ div {
         text-align: center;
         text-decoration: underline;
         text-decoration-color: blue;
-        text-underline-offset: f.rem(8) + rem;
-        text-decoration-thickness: f.rem(2) + rem;
+        text-underline-offset: f.rem(8);
+        text-decoration-thickness: f.rem(2);
     }
 
     section {
-        margin: f.rem(v.$section-margin) + rem;
+        margin: f.rem(v.$section-margin);
 
         &:nth-child(2) {
             display: flex;
 
             article:nth-child(odd) {
-                @include article-card(blue, green, f.rem(16) + rem);
-                padding: f.rem(v.$article-padding-top-bottom) + rem f.rem(v.$article-padding-left-right) + rem;
+                @include article-card(blue, green, f.rem(16));
+                padding: f.rem(v.$article-padding-top-bottom) f.rem(v.$article-padding-left-right);
                 text-align: center;
             }
 
             article:nth-child(even) {
-                @include article-card(red, green, f.rem(16) + rem);
-                padding: f.rem(v.$article-padding-top-bottom) + rem f.rem(v.$article-padding-left-right) + rem;
+                @include article-card(red, green, f.rem(16));
+                padding: f.rem(v.$article-padding-top-bottom) f.rem(v.$article-padding-left-right);
                 text-align: center;
             }
         }
@@ -46,7 +46,7 @@ div {
         &:last-child {
             article {
                 text-align: center;
-                @include article-card(green, blue, f.rem(24) + rem);
+                @include article-card(green, blue, f.rem(24));
             }
         }
     }
