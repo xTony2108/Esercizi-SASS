@@ -1,0 +1,122 @@
+@use "sass:color";
+@use "./function-module.scss" as f;
+@use "./variable-module.scss" as v;
+
+@mixin article-card($color, $border-color, $font-size) {
+    color: $color;
+    border: f.rem(1) solid $border-color;
+    font-size: $font-size;
+}
+
+body {
+    margin: f.rem(8);
+
+    & > div {
+        border: f.rem(1) solid red;
+        width: 67%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            color: green;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: blue;
+            text-underline-offset: f.rem(8);
+            text-decoration-thickness: f.rem(2);
+        }
+
+        h2 {
+            @extend h1;
+            padding: f.rem(16);
+            border: f.rem(1) solid red;
+            text-decoration: none;
+        }
+
+        section {
+            margin: f.rem(v.$section-margin);
+
+            &:nth-child(3) {
+                display: flex;
+
+                article:nth-child(odd) {
+                    @include article-card(blue, green, f.rem(16));
+                    padding: f.rem(v.$article-padding-top-bottom) f.rem(v.$article-padding-left-right);
+                    text-align: center;
+                }
+
+                article:nth-child(even) {
+                    @include article-card(red, green, f.rem(16));
+                    padding: f.rem(v.$article-padding-top-bottom) f.rem(v.$article-padding-left-right);
+                    text-align: center;
+                }
+            }
+
+            &:nth-child(4) {
+                width: calc(100% - f.rem(20));
+                display: flex;
+                gap: calc(20/16) + rem;
+            }
+
+            &:last-child {
+                width: calc(100% - f.rem(20));
+
+                article {
+                    text-align: center;
+                    @include article-card(green, blue, f.rem(24));
+                }
+            }
+        }
+    }
+}
+
+@for $index from 1 to 20 {
+    $bg-color: darken(white, $index * 5%);
+    $text-color: lighten(black, $index * 5%);
+
+    @if $index ==10 {
+        div {
+            section:nth-child(4) {
+                div:nth-child(#{$index}) {
+                    background-color: blue;
+                    color: red;
+                }
+            }
+        }
+    }
+
+    @else {
+        div {
+            section:nth-child(4) {
+                div:nth-child(#{$index}) {
+                    background-color: $bg-color;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+
+$numbers: (
+    "1rem":1rem,
+    "2rem":2rem,
+    "3rem":3rem
+);
+
+@each $key,
+$value in $numbers {
+    $font-size: $value;
+
+    div {
+        section:nth-child(4) {
+            .fs-#{$key} {
+                width: f.rem(45);
+                height: f.rem(45);
+                border: f.rem(1) solid red;
+                font-size: $font-size;
+            }
+        }
+    }
+}

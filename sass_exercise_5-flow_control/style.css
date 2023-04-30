@@ -1,0 +1,176 @@
+body {
+  margin: 0.5rem;
+}
+body > div {
+  border: 0.0625rem solid red;
+  width: 67%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body > div h1, body > div h2 {
+  color: green;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.125rem;
+}
+body > div h2 {
+  padding: 1rem;
+  border: 0.0625rem solid red;
+  text-decoration: none;
+}
+body > div section {
+  margin: 0.625rem;
+}
+body > div section:nth-child(3) {
+  display: flex;
+}
+body > div section:nth-child(3) article:nth-child(odd) {
+  color: blue;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 1.25rem 0.9375rem;
+  text-align: center;
+}
+body > div section:nth-child(3) article:nth-child(even) {
+  color: red;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding: 1.25rem 0.9375rem;
+  text-align: center;
+}
+body > div section:nth-child(4) {
+  width: calc(100% - 1.25rem);
+  display: flex;
+  gap: 1.25rem;
+}
+body > div section:last-child {
+  width: calc(100% - 1.25rem);
+}
+body > div section:last-child article {
+  text-align: center;
+  color: green;
+  border: 0.0625rem solid blue;
+  font-size: 1.5rem;
+}
+
+div section:nth-child(4) div:nth-child(1) {
+  background-color: #f2f2f2;
+  color: #0d0d0d;
+}
+
+div section:nth-child(4) div:nth-child(2) {
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+}
+
+div section:nth-child(4) div:nth-child(3) {
+  background-color: #d9d9d9;
+  color: #262626;
+}
+
+div section:nth-child(4) div:nth-child(4) {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+div section:nth-child(4) div:nth-child(5) {
+  background-color: #bfbfbf;
+  color: #404040;
+}
+
+div section:nth-child(4) div:nth-child(6) {
+  background-color: #b3b3b3;
+  color: #4d4d4d;
+}
+
+div section:nth-child(4) div:nth-child(7) {
+  background-color: #a6a6a6;
+  color: #595959;
+}
+
+div section:nth-child(4) div:nth-child(8) {
+  background-color: #999999;
+  color: #666666;
+}
+
+div section:nth-child(4) div:nth-child(9) {
+  background-color: #8c8c8c;
+  color: #737373;
+}
+
+div section:nth-child(4) div:nth-child(10) {
+  background-color: blue;
+  color: red;
+}
+
+div section:nth-child(4) div:nth-child(11) {
+  background-color: #737373;
+  color: #8c8c8c;
+}
+
+div section:nth-child(4) div:nth-child(12) {
+  background-color: #666666;
+  color: #999999;
+}
+
+div section:nth-child(4) div:nth-child(13) {
+  background-color: #595959;
+  color: #a6a6a6;
+}
+
+div section:nth-child(4) div:nth-child(14) {
+  background-color: #4d4d4d;
+  color: #b3b3b3;
+}
+
+div section:nth-child(4) div:nth-child(15) {
+  background-color: #404040;
+  color: #bfbfbf;
+}
+
+div section:nth-child(4) div:nth-child(16) {
+  background-color: #333333;
+  color: #cccccc;
+}
+
+div section:nth-child(4) div:nth-child(17) {
+  background-color: #262626;
+  color: #d9d9d9;
+}
+
+div section:nth-child(4) div:nth-child(18) {
+  background-color: #1a1a1a;
+  color: #e6e6e6;
+}
+
+div section:nth-child(4) div:nth-child(19) {
+  background-color: #0d0d0d;
+  color: #f2f2f2;
+}
+
+div section:nth-child(4) .fs-1rem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+  font-size: 1rem;
+}
+
+div section:nth-child(4) .fs-2rem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+  font-size: 2rem;
+}
+
+div section:nth-child(4) .fs-3rem {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  border: 0.0625rem solid red;
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
